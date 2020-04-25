@@ -18,7 +18,7 @@ var playMusic = () => {
     song.setAttribute('src', './file/audio/song.mp3');
     $('body').append(song);
     song.loop = true;
-    // song.play();
+    song.play();
     $('body').addClass('violet-filcker');
     setTimeout(() => $('#bulb1').addClass('bulb-yellow-filcker'), 0);
     setTimeout(() => $('#bulb2').addClass('bulb-red-filcker'), 400);
