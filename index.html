@@ -1,12 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rita-Ryuunosuke</title>
+    <title>Chúc mừng sinh nhật</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="effect.js"></script>
+    <script src="fizzytext.js"></script>
 </head>
+
 <body>
-    This is my web
+    <div class="bulb-container" id="bulb_container">
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb1"></div>
+        </div>
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb2"></div>
+        </div>
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb3"></div>
+        </div>
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb4"></div>
+        </div>
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb5"></div>
+        </div>
+        <div class="hide" id="bulb_cover">
+            <div class="bulb" id="bulb6"></div>
+        </div>
+    </div>
+
+    <div class="banner-container" id="banner_container">
+        <!-- <img class="banner hide" id="banner" src="./file/img/banner.png" /> -->
+        <img src="https://i.gifer.com/6551.gif" alt="./file/img/banner.png" class="banner hide" id="banner">
+    </div>
+    <div class="ballon-container" id="ballon_container">
+        <div class="ballon" id="ballon1"></div>
+        <div class="ballon" id="ballon2"></div>
+        <div class="ballon" id="ballon3"></div>
+        <div class="ballon" id="ballon4"></div>
+        <div class="ballon" id="ballon5"></div>
+        <div class="ballon" id="ballon6"></div>
+        <div class="ballon" id="ballon7"></div>
+    </div>
+
+    <div class="fizzy-text" id="fizzytext"></div>
+
+    <div class="btn-container" id="btn_container">
+        <button class="btn" id="turn_lights">Turn On Lights</button>
+        <button class="btn hide" id="play_music">Play Music</button>
+        <button class="btn hide" id="lets_decorate">Let's Decorate</button>
+        <button class="btn hide" id="fly_with_ballons">Fly With Ballons</button>
+        <button class="btn hide" id="cake">A Delicus Cake</button>
+        <button class="btn hide" id="candle">Light Candle</button>
+        <button class="btn hide story-start" id="storyStart">A Message For U</button>
+    </div>
 </body>
+
 </html>

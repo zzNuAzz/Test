@@ -1,0 +1,12 @@
+{
+  "name": "hpbd",
+  "version": "1.0.0",
+  "description": "cmsn",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zzNuAzz",
+  "license": "ISC",
+  "dependencies": {}
+}
