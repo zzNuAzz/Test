@@ -1,1 +1,1 @@
-Visit <a href = 'hpbd.rita-ryuunosuke.xyz'> here</a>
+hpbd.rita-ryuunosuke.xyz
