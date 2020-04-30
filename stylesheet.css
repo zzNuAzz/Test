@@ -1,690 +1,715 @@
-body {
-    background-color: #555;
-    -webkit-transition: background-color 5s ease-in-out;
-    -moz-transition: background-color 5s ease-in-out;
-    -ms-transition: background-color 5s ease-in-out;
-    -o-transition: background-color 5s ease-in-out;
-    transition: background-color 5s ease-in-out;
-    margin: auto;
-    max-width: 800px;
-}
-
-.violet {
-    background-color: blueviolet;
-}
-
-@keyframes violet-filcker {
-    0% {
+    body {
+        background-color: #555;
+        -webkit-transition: background-color 5s ease-in-out;
+        -moz-transition: background-color 5s ease-in-out;
+        -ms-transition: background-color 5s ease-in-out;
+        -o-transition: background-color 5s ease-in-out;
+        transition: background-color 5s ease-in-out;
+        margin: auto;
+        max-width: 800px;
+    }
+    
+    .violet {
         background-color: blueviolet;
     }
-    16.6% {
-        background-color: rgb(190, 100, 255);
+    
+    @keyframes violet-filcker {
+        0% {
+            background-color: blueviolet;
+        }
+        16.6% {
+            background-color: rgb(190, 100, 255);
+        }
+        33.3% {
+            background-color: rgb(169, 49, 255);
+        }
+        50% {
+            background-color: rgb(149, 0, 255);
+        }
+        66.6% {
+            background-color: rgb(169, 49, 255);
+        }
+        83.3% {
+            background-color: rgb(190, 100, 255);
+        }
+        100% {
+            background-color: blueviolet;
+        }
     }
-    33.3% {
-        background-color: rgb(169, 49, 255);
+    
+    @-moz-keyframes violet-filcker {
+        0% {
+            background-color: blueviolet;
+        }
+        16.6% {
+            background-color: rgb(190, 100, 255);
+        }
+        33.3% {
+            background-color: rgb(169, 49, 255);
+        }
+        50% {
+            background-color: rgb(149, 0, 255);
+        }
+        66.6% {
+            background-color: rgb(169, 49, 255);
+        }
+        83.3% {
+            background-color: rgb(190, 100, 255);
+        }
+        100% {
+            background-color: blueviolet;
+        }
     }
-    50% {
-        background-color: rgb(149, 0, 255);
+    
+    @-webkit-keyframes violet-filcker {
+        0% {
+            background-color: blueviolet;
+        }
+        16.6% {
+            background-color: rgb(190, 100, 255);
+        }
+        33.3% {
+            background-color: rgb(169, 49, 255);
+        }
+        50% {
+            background-color: rgb(149, 0, 255);
+        }
+        66.6% {
+            background-color: rgb(169, 49, 255);
+        }
+        83.3% {
+            background-color: rgb(190, 100, 255);
+        }
+        100% {
+            background-color: blueviolet;
+        }
     }
-    66.6% {
-        background-color: rgb(169, 49, 255);
+    
+    @-o-keyframes violet-filcker {
+        0% {
+            background-color: blueviolet;
+        }
+        16.6% {
+            background-color: rgb(190, 100, 255);
+        }
+        33.3% {
+            background-color: rgb(169, 49, 255);
+        }
+        50% {
+            background-color: rgb(149, 0, 255);
+        }
+        66.6% {
+            background-color: rgb(169, 49, 255);
+        }
+        83.3% {
+            background-color: rgb(190, 100, 255);
+        }
+        100% {
+            background-color: blueviolet;
+        }
     }
-    83.3% {
-        background-color: rgb(190, 100, 255);
+    
+    .violet-filcker {
+        animation: violet-filcker ease-in-out 8s infinite;
+        -moz-animation: violet-filcker ease-in-out 8s infinite;
+        -webkit-animation: violet-filcker ease-in-out 8s infinite;
+        -o-animation: violet-filcker ease-in-out 8s infinite;
     }
-    100% {
-        background-color: blueviolet;
+    
+    .hide {
+        display: none;
     }
-}
-
-@-moz-keyframes violet-filcker {
-    0% {
-        background-color: blueviolet;
+    
+    .btn-container {
+        position: absolute;
+        bottom: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        left: 0
     }
-    16.6% {
-        background-color: rgb(190, 100, 255);
+    
+    .btn {
+        background-color: chocolate;
+        border: 0px;
+        border-radius: 8px;
+        padding: 5px 15px 5px 15px;
+        font-size: 20px;
     }
-    33.3% {
-        background-color: rgb(169, 49, 255);
+    
+    .bulb-container {
+        display: flex;
+        padding: 0 10%;
+        transition: background-image linear 3s;
     }
-    50% {
-        background-color: rgb(149, 0, 255);
+    
+    .bulb-container>* {
+        min-height: 60px;
+        margin: 0;
+        flex: 1;
     }
-    66.6% {
-        background-color: rgb(169, 49, 255);
+    
+    .bulb {
+        background-image: url('./file/img/bulb.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        -webkit-transition: background-image 5s ease-in-out;
+        -moz-transition: background-image 5s ease-in-out;
+        -ms-transition: background-image 5s ease-in-out;
+        -o-transition: background-image 5s ease-in-out;
+        transition: background-image 5s ease-in-out;
+        height: 100%;
     }
-    83.3% {
-        background-color: rgb(190, 100, 255);
-    }
-    100% {
-        background-color: blueviolet;
-    }
-}
-
-@-webkit-keyframes violet-filcker {
-    0% {
-        background-color: blueviolet;
-    }
-    16.6% {
-        background-color: rgb(190, 100, 255);
-    }
-    33.3% {
-        background-color: rgb(169, 49, 255);
-    }
-    50% {
-        background-color: rgb(149, 0, 255);
-    }
-    66.6% {
-        background-color: rgb(169, 49, 255);
-    }
-    83.3% {
-        background-color: rgb(190, 100, 255);
-    }
-    100% {
-        background-color: blueviolet;
-    }
-}
-
-@-o-keyframes violet-filcker {
-    0% {
-        background-color: blueviolet;
-    }
-    16.6% {
-        background-color: rgb(190, 100, 255);
-    }
-    33.3% {
-        background-color: rgb(169, 49, 255);
-    }
-    50% {
-        background-color: rgb(149, 0, 255);
-    }
-    66.6% {
-        background-color: rgb(169, 49, 255);
-    }
-    83.3% {
-        background-color: rgb(190, 100, 255);
-    }
-    100% {
-        background-color: blueviolet;
-    }
-}
-
-.violet-filcker {
-    animation: violet-filcker ease-in-out 8s infinite;
-    -moz-animation: violet-filcker ease-in-out 8s infinite;
-    -webkit-animation: violet-filcker ease-in-out 8s infinite;
-    -o-animation: violet-filcker ease-in-out 8s infinite;
-}
-
-.hide {
-    display: none;
-}
-
-.btn-container {
-    position: absolute;
-    bottom: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    left: 0
-}
-
-.btn {
-    background-color: chocolate;
-    border: 0px;
-    border-radius: 8px;
-    padding: 5px 15px 5px 15px;
-    font-size: 20px;
-}
-
-.bulb-container {
-    display: flex;
-    padding: 0 10%;
-    transition: background-image linear 3s;
-}
-
-.bulb-container>* {
-    min-height: 60px;
-    margin: 0;
-    flex: 1;
-}
-
-.bulb {
-    background-image: url('./file/img/bulb.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    -webkit-transition: background-image 5s ease-in-out;
-    -moz-transition: background-image 5s ease-in-out;
-    -ms-transition: background-image 5s ease-in-out;
-    -o-transition: background-image 5s ease-in-out;
-    transition: background-image 5s ease-in-out;
-    height: 100%;
-}
-
-.bulb-yellow {
-    background-image: url('./file/img/bulb_yellow.png');
-}
-
-.bulb-red {
-    background-image: url('./file/img/bulb_red.png');
-}
-
-.bulb-blue {
-    background-image: url('./file/img/bulb_blue.png');
-}
-
-.bulb-green {
-    background-image: url('./file/img/bulb_green.png');
-}
-
-.bulb-pink {
-    background-image: url('./file/img/bulb_pink.png');
-}
-
-.bulb-orange {
-    background-image: url('./file/img/bulb_orange.png');
-}
-
-@keyframes bulb-yellow-filcker {
-    0% {
+    
+    .bulb-yellow {
         background-image: url('./file/img/bulb_yellow.png');
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-}
-
-@-moz-keyframes bulb-yellow-filcker {
-    0% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-}
-
-@-webkit-keyframes bulb-yellow-filcker {
-    0% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-}
-
-@-o-keyframes bulb-yellow-filcker {
-    0% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_yellow.png');
-    }
-}
-
-.bulb-yellow-filcker {
-    animation: bulb-yellow-filcker 2s linear infinite;
-    -moz-animation: bulb-yellow-filcker 2s linear infinite;
-    -webkit-animation: bulb-yellow-filcker 2s linear infinite;
-    -o-animation: bulb-yellow-filcker 2s linear infinite;
-}
-
-@keyframes bulb-red-filcker {
-    0% {
+    
+    .bulb-red {
         background-image: url('./file/img/bulb_red.png');
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-}
-
-@-moz-keyframes bulb-red-filcker {
-    0% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-}
-
-@-webkit-keyframes bulb-red-filcker {
-    0% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-}
-
-@-o-keyframes bulb-red-filcker {
-    0% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_red.png');
-    }
-}
-
-.bulb-red-filcker {
-    animation: bulb-red-filcker 2s linear infinite;
-    -moz-animation: bulb-red-filcker 2s linear infinite;
-    -webkit-animation: bulb-red-filcker 2s linear infinite;
-    -o-animation: bulb-red-filcker 2s linear infinite;
-}
-
-@keyframes bulb-green-filcker {
-    0% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-}
-
-@-moz-keyframes bulb-green-filcker {
-    0% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-}
-
-@-webkit-keyframes bulb-green-filcker {
-    0% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-}
-
-@-o-keyframes bulb-green-filcker {
-    0% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_green.png');
-    }
-}
-
-.bulb-green-filcker {
-    animation: bulb-green-filcker 2s linear infinite;
-    -moz-animation: bulb-green-filcker 2s linear infinite;
-    -webkit-animation: bulb-green-filcker 2s linear infinite;
-    -o-animation: bulb-green-filcker 2s linear infinite;
-}
-
-@keyframes bulb-blue-filcker {
-    0% {
+    
+    .bulb-blue {
         background-image: url('./file/img/bulb_blue.png');
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
+    
+    .bulb-green {
+        background-image: url('./file/img/bulb_green.png');
     }
-    100% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-}
-
-@-moz-keyframes bulb-blue-filcker {
-    0% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-}
-
-@-webkit-keyframes bulb-blue-filcker {
-    0% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-}
-
-@-o-keyframes bulb-blue-filcker {
-    0% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_blue.png');
-    }
-}
-
-.bulb-blue-filcker {
-    animation: bulb-blue-filcker 2s linear infinite;
-    -moz-animation: bulb-blue-filcker 2s linear infinite;
-    -webkit-animation: bulb-blue-filcker 2s linear infinite;
-    -o-animation: bulb-blue-filcker 2s linear infinite;
-}
-
-@keyframes bulb-pink-filcker {
-    0% {
+    
+    .bulb-pink {
         background-image: url('./file/img/bulb_pink.png');
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-}
-
-@-moz-keyframes bulb-pink-filcker {
-    0% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-}
-
-@-webkit-keyframes bulb-pink-filcker {
-    0% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-}
-
-@-o-keyframes bulb-pink-filcker {
-    0% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-    50% {
-        background-image: url('./file/img/bulb.png');
-    }
-    100% {
-        background-image: url('./file/img/bulb_pink.png');
-    }
-}
-
-.bulb-pink-filcker {
-    animation: bulb-pink-filcker 2s linear infinite;
-    -moz-animation: bulb-pink-filcker 2s linear infinite;
-    -webkit-animation: bulb-pink-filcker 2s linear infinite;
-    -o-animation: bulb-pink-filcker 2s linear infinite;
-}
-
-@keyframes bulb-orange-filcker {
-    0% {
+    
+    .bulb-orange {
         background-image: url('./file/img/bulb_orange.png');
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
+    
+    @keyframes bulb-yellow-filcker {
+        0% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
     }
-    100% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @-moz-keyframes bulb-yellow-filcker {
+        0% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
     }
-}
-
-@-moz-keyframes bulb-orange-filcker {
-    0% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @-webkit-keyframes bulb-yellow-filcker {
+        0% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
+    
+    @-o-keyframes bulb-yellow-filcker {
+        0% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_yellow.png');
+        }
     }
-    100% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    .bulb-yellow-filcker {
+        animation: bulb-yellow-filcker 2s linear infinite;
+        -moz-animation: bulb-yellow-filcker 2s linear infinite;
+        -webkit-animation: bulb-yellow-filcker 2s linear infinite;
+        -o-animation: bulb-yellow-filcker 2s linear infinite;
     }
-}
-
-@-webkit-keyframes bulb-orange-filcker {
-    0% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @keyframes bulb-red-filcker {
+        0% {
+            background-image: url('./file/img/bulb_red.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_red.png');
+        }
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
+    
+    @-moz-keyframes bulb-red-filcker {
+        0% {
+            background-image: url('./file/img/bulb_red.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_red.png');
+        }
     }
-    100% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @-webkit-keyframes bulb-red-filcker {
+        0% {
+            background-image: url('./file/img/bulb_red.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_red.png');
+        }
     }
-}
-
-@-o-keyframes bulb-orange-filcker {
-    0% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @-o-keyframes bulb-red-filcker {
+        0% {
+            background-image: url('./file/img/bulb_red.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_red.png');
+        }
     }
-    50% {
-        background-image: url('./file/img/bulb.png');
+    
+    .bulb-red-filcker {
+        animation: bulb-red-filcker 2s linear infinite;
+        -moz-animation: bulb-red-filcker 2s linear infinite;
+        -webkit-animation: bulb-red-filcker 2s linear infinite;
+        -o-animation: bulb-red-filcker 2s linear infinite;
     }
-    100% {
-        background-image: url('./file/img/bulb_orange.png');
+    
+    @keyframes bulb-green-filcker {
+        0% {
+            background-image: url('./file/img/bulb_green.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_green.png');
+        }
     }
-}
-
-.bulb-orange-filcker {
-    animation: bulb-orange-filcker 2s linear infinite;
-    -moz-animation: bulb-pink-filcker 2s linear infinite;
-    -webkit-animation: bulb-pink-filcker 2s linear infinite;
-    -o-animation: bulb-pink-filcker 2s linear infinite;
-}
-
-.banner-container {
-    display: flex;
-    justify-content: center;
-}
-
-.banner {
-    max-width: 100%;
-    height: auto;
-    margin-top: 25px;
-}
-
-@keyframes banner-in {
-    0% {
-        transform: translate(0px, -200px);
+    
+    @-moz-keyframes bulb-green-filcker {
+        0% {
+            background-image: url('./file/img/bulb_green.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_green.png');
+        }
     }
-    100% {
-        transform: translate(0px, 0px);
+    
+    @-webkit-keyframes bulb-green-filcker {
+        0% {
+            background-image: url('./file/img/bulb_green.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_green.png');
+        }
     }
-}
-
-@-moz-keyframes banner-in {
-    0% {
-        -moz-transform: translate(0px, -200px);
+    
+    @-o-keyframes bulb-green-filcker {
+        0% {
+            background-image: url('./file/img/bulb_green.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_green.png');
+        }
     }
-    100% {
-        -moz-transform: translate(0px, 0px);
+    
+    .bulb-green-filcker {
+        animation: bulb-green-filcker 2s linear infinite;
+        -moz-animation: bulb-green-filcker 2s linear infinite;
+        -webkit-animation: bulb-green-filcker 2s linear infinite;
+        -o-animation: bulb-green-filcker 2s linear infinite;
     }
-}
-
-@-webkit-keyframes banner-in {
-    0% {
-        -webkit-transform: translate(0px, -200px);
+    
+    @keyframes bulb-blue-filcker {
+        0% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
     }
-    100% {
-        -webkit-transform: translate(0px, 0px);
+    
+    @-moz-keyframes bulb-blue-filcker {
+        0% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
     }
-}
-
-@-o-keyframes banner-in {
-    0% {
-        -o-transform: translate(0px, -200px);
+    
+    @-webkit-keyframes bulb-blue-filcker {
+        0% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
     }
-    100% {
-        -o-transform: translate(0px, 0px);
+    
+    @-o-keyframes bulb-blue-filcker {
+        0% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_blue.png');
+        }
     }
-}
-
-@keyframes banner-vibrate {
-    0% {
-        transform: rotate(0deg);
+    
+    .bulb-blue-filcker {
+        animation: bulb-blue-filcker 2s linear infinite;
+        -moz-animation: bulb-blue-filcker 2s linear infinite;
+        -webkit-animation: bulb-blue-filcker 2s linear infinite;
+        -o-animation: bulb-blue-filcker 2s linear infinite;
     }
-    25% {
-        transform: rotate(-3deg);
+    
+    @keyframes bulb-pink-filcker {
+        0% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
     }
-    50% {
-        transform: rotate(0deg);
+    
+    @-moz-keyframes bulb-pink-filcker {
+        0% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
     }
-    75% {
-        transform: rotate(3deg);
+    
+    @-webkit-keyframes bulb-pink-filcker {
+        0% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
     }
-}
-
-@-moz-keyframes banner-vibrate {
-    0% {
-        -moz-transform: rotate(0deg);
+    
+    @-o-keyframes bulb-pink-filcker {
+        0% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_pink.png');
+        }
     }
-    25% {
-        -moz-transform: rotate(-3deg);
+    
+    .bulb-pink-filcker {
+        animation: bulb-pink-filcker 2s linear infinite;
+        -moz-animation: bulb-pink-filcker 2s linear infinite;
+        -webkit-animation: bulb-pink-filcker 2s linear infinite;
+        -o-animation: bulb-pink-filcker 2s linear infinite;
     }
-    50% {
-        -moz-transform: rotate(0deg);
+    
+    @keyframes bulb-orange-filcker {
+        0% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
     }
-    75% {
-        -moz-transform: rotate(3deg);
+    
+    @-moz-keyframes bulb-orange-filcker {
+        0% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
     }
-}
-
-@-webkit-keyframes banner-vibrate {
-    0% {
-        -webkit-transform: rotate(0deg);
+    
+    @-webkit-keyframes bulb-orange-filcker {
+        0% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
     }
-    25% {
-        -webkit-transform: rotate(-3deg);
+    
+    @-o-keyframes bulb-orange-filcker {
+        0% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
+        50% {
+            background-image: url('./file/img/bulb.png');
+        }
+        100% {
+            background-image: url('./file/img/bulb_orange.png');
+        }
     }
-    50% {
-        -webkit-transform: rotate(0deg);
+    
+    .bulb-orange-filcker {
+        animation: bulb-orange-filcker 2s linear infinite;
+        -moz-animation: bulb-pink-filcker 2s linear infinite;
+        -webkit-animation: bulb-pink-filcker 2s linear infinite;
+        -o-animation: bulb-pink-filcker 2s linear infinite;
     }
-    75% {
-        -webkit-transform: rotate(3deg);
+    
+    .banner-container {
+        display: flex;
+        justify-content: center;
     }
-}
-
-@-o-keyframes banner-vibrate {
-    0% {
-        -o-transform: rotate(0deg);
+    
+    .banner {
+        max-width: 100%;
+        height: auto;
+        margin-top: 25px;
     }
-    25% {
-        -o-transform: rotate(-3deg);
+    
+    @keyframes banner-in {
+        0% {
+            transform: translate(0px, -200px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
     }
-    50% {
-        -o-transform: rotate(0deg);
+    
+    @-moz-keyframes banner-in {
+        0% {
+            -moz-transform: translate(0px, -200px);
+        }
+        100% {
+            -moz-transform: translate(0px, 0px);
+        }
     }
-    75% {
-        -o-transform: rotate(3deg);
+    
+    @-webkit-keyframes banner-in {
+        0% {
+            -webkit-transform: translate(0px, -200px);
+        }
+        100% {
+            -webkit-transform: translate(0px, 0px);
+        }
     }
-}
-
-.banner-in {
-    animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
-    -moz-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
-    -webkit-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
-    -o-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
-}
-
-.fizzy-text {
-    /* display: flex; */
-    justify-content: center;
-}
-
-.fizzy-text>canvas {
-    width: 100%;
-    display: none;
-}
-
-@media only screen and (min-width: 900px) {
+    
+    @-o-keyframes banner-in {
+        0% {
+            -o-transform: translate(0px, -200px);
+        }
+        100% {
+            -o-transform: translate(0px, 0px);
+        }
+    }
+    
+    @keyframes banner-vibrate {
+        0% {
+            transform: rotate(0deg);
+        }
+        25% {
+            transform: rotate(-3deg);
+        }
+        50% {
+            transform: rotate(0deg);
+        }
+        75% {
+            transform: rotate(3deg);
+        }
+    }
+    
+    @-moz-keyframes banner-vibrate {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        25% {
+            -moz-transform: rotate(-3deg);
+        }
+        50% {
+            -moz-transform: rotate(0deg);
+        }
+        75% {
+            -moz-transform: rotate(3deg);
+        }
+    }
+    
+    @-webkit-keyframes banner-vibrate {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        25% {
+            -webkit-transform: rotate(-3deg);
+        }
+        50% {
+            -webkit-transform: rotate(0deg);
+        }
+        75% {
+            -webkit-transform: rotate(3deg);
+        }
+    }
+    
+    @-o-keyframes banner-vibrate {
+        0% {
+            -o-transform: rotate(0deg);
+        }
+        25% {
+            -o-transform: rotate(-3deg);
+        }
+        50% {
+            -o-transform: rotate(0deg);
+        }
+        75% {
+            -o-transform: rotate(3deg);
+        }
+    }
+    
+    .banner-in {
+        animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
+        -moz-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
+        -webkit-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
+        -o-animation: banner-vibrate linear 2s infinite, banner-in 2s linear;
+    }
+    
+    .fizzy-text {
+        /* display: flex; */
+        justify-content: center;
+    }
+    
     .fizzy-text>canvas {
-        height: calc(var(height) * 40%);
+        width: 100%;
+        display: none;
     }
-}
-
-
-/* ----------------------------------------------
+    
+    @media only screen and (min-width: 900px) {
+        .fizzy-text>canvas {
+            height: calc(var(height) * 40%);
+        }
+    }
+    /* ----------------------------------------------
  * Generated by Animista on 2020-4-6 17:46:42
  * Licensed under FreeBSD License.
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-
-/**
+    /**
  * ----------------------------------------
  * animation slide-fwd-center
  * ----------------------------------------
  */
-
-@-webkit-keyframes slide-fwd-center {
-    0% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
+    
+    @-webkit-keyframes slide-fwd-center {
+        0% {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        100% {
+            -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+        }
     }
-    100% {
-        -webkit-transform: translateZ(160px);
-        transform: translateZ(160px);
+    
+    @keyframes slide-fwd-center {
+        0% {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+        }
+        100% {
+            -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+        }
     }
-}
-
-@keyframes slide-fwd-center {
-    0% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
+    
+    .slide-fwd-center {
+        -webkit-animation: slide-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
+        animation: slide-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
     }
-    100% {
-        -webkit-transform: translateZ(160px);
-        transform: translateZ(160px);
+    
+    .cake-container {
+        height: 300px;
+        width: 50%;
+        margin: auto;
     }
-}
-
-.slide-fwd-center {
-    -webkit-animation: slide-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
-    animation: slide-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite;
-}
+    
+    .cake {
+        height: 100%;
+        background-image: url('https://media.tenor.com/images/1930fd896363b386f1b4867deb0d73f1/tenor.gif');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .message {
+        margin: 20px auto;
+    }
+    
+    .message>p {
+        display: none;
+        font-family: 'Signika', sans-serif;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #C4515C;
+        text-shadow: 2px 2px 2px rgb(85, 85, 85);
+        font-weight: bold;
+        text-align: center;
+    }

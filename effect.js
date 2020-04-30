@@ -30,28 +30,45 @@ var playMusic = () => {
 var letsDecorate = () => {
     $('#banner').show();
     $('#banner').addClass('banner-in');
+    setTimeout(() => {
+        $('#fizzytext > canvas').fadeIn('slow').css("display", "flex");
+    }, 1000);
 
 }
-var flyWithBallons = () => {
-    $('#fizzytext > canvas').fadeIn('slow').css("display", "flex");
-}
+
 var cake = () => {
-
-}
-var candle = () => {
-
+    $('#fizzytext > canvas').fadeOut('slow');
+    setTimeout(() => {
+        $('#cake_container').fadeIn('fast');
+    }, 500);
 }
 var storyStart = () => {
+    var i;
+    console.log('start');
 
+    function msgLoop(i) {
+        console.log($(".message > p:nth-child(" + i + ")").html());
+        $(".message > p:nth-child(" + i + ")").fadeOut('slow').delay(800).promise().done(function() {
+            i = i + 1;
+            $(".message > p:nth-child(" + i + ")").fadeIn('slow').delay(1000);
+            if (i == 50) {
+                $(".message > p:nth-child(49)").fadeOut('slow').promise().done(function() {
+                    console.log('end message')
+                });
+            } else {
+                msgLoop(i);
+            }
+
+        });
+    }
+    msgLoop(0);
 }
 
 let listButton = [
     { id: '#turn_lights', function: turnLights, delay: 3000 },
     { id: '#play_music', function: playMusic, delay: 3000 },
     { id: '#lets_decorate', function: letsDecorate, delay: 3000 },
-    { id: '#fly_with_ballons', function: flyWithBallons, delay: 3000 },
-    { id: '#cake', function: cake, delay: 3000 },
-    { id: '#candle', function: candle, delay: 3000 },
+    { id: '#cake_btn', function: cake, delay: 3000 },
     { id: '#story_start', function: storyStart, delay: 3000 }
 ];
 let setupBtn = (btn, index, arr) => {

@@ -288,7 +288,6 @@ $(document).ready(function() {
         const width = 900;
         const height = 300;
         const textAscent = 210;
-        console.log(textAscent);
         const textOffsetLeft = 0;
         const noiseScale = 200;
         const colors = ["#AB5BD6", "#19BCA0", "#FFBC63"];
@@ -481,7 +480,7 @@ $(document).ready(function() {
         }
     }
 
-    const message = '  YourName  ';
+    const message = '   NguyễnÂn  ';
     // start with a large font size
 
     const id = 'fizzytext';
