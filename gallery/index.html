@@ -89,11 +89,11 @@
 
 
             genHTML = (index) => {
-                return "<div class=\"grid-item\">" +
-                    "<figure class=\"effect-bubba\">" +
-                    `<img src=\"img/${index}.jpg\" alt=\"Image\" height=\"320\" width=\"320\">` +
-                    `<figcaption><a href=\"img/${index}.jpg\">View more</a></figcaption>` +
-                    "</figure></div>";
+                return `<div class="grid-item">
+                    <figure class="effect-bubba">
+                    <img src="img/${index}.jpg" alt="Image" style="width:320px; height:320px; object-fit:cover">
+                    <figcaption><a href="img/${index}.jpg">View more</a></figcaption> 
+                    </figure></div>`;
             }
 
             let htmlListImg = "";
