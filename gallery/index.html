@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery view</title>
+    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+
+
+</head>
+
+<body>
+    <div class="selected">
+        <div class="cd-full-width">
+            <div class="container-fluid js-tm-page-content" data-page-no="1" data-page-type="gallery">
+                <div class="tm-img-gallery-container">
+                    <div class="tm-img-gallery gallery-one" id="galleryID">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script>
+        function adjustHeightOfPage(pageNo) {
+
+            var offset = 80;
+            var pageContentHeight = 0;
+
+            var pageType = $('div[data-page-no="' + pageNo + '"]').data("page-type");
+
+            if (pageType != undefined && pageType == "gallery") {
+                pageContentHeight = $(".cd-hero-slider li:nth-of-type(" + pageNo + ") .tm-img-gallery-container").height();
+            } else {
+                pageContentHeight = $(".cd-hero-slider li:nth-of-type(" + pageNo + ") .js-tm-page-content").height() + 20;
+            }
+
+            if ($(window).width() >= 992) {
+                offset = 120;
+            } else if ($(window).width() < 480) {
+                offset = 40;
+            }
+            var totalPageHeight = $('.cd-slider-nav').height() +
+                pageContentHeight + offset +
+                $('.tm-footer').height();
+
+            if (totalPageHeight > $(window).height()) {
+                $('.cd-hero-slider').addClass('small-screen');
+                $('.cd-hero-slider li:nth-of-type(' + pageNo + ')').css("min-height", totalPageHeight + "px");
+            } else {
+                $('.cd-hero-slider').removeClass('small-screen');
+                $('.cd-hero-slider li:nth-of-type(' + pageNo + ')').css("min-height", "100%");
+            }
+        }
+        $(window).load(function() {
+
+            adjustHeightOfPage(1);
+            $('.gallery-one').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+            $(window).resize(function() {
+                var currentPageNo = $(".cd-hero-slider li.selected .js-tm-page-content").data("page-no");
+
+                setTimeout(function() {
+                    adjustHeightOfPage(currentPageNo);
+                }, 1000);
+
+            });
+
+            $('body').addClass('loaded');
+
+
+
+            genHTML = (index) => {
+                return "<div class=\"grid-item\">" +
+                    "<figure class=\"effect-bubba\">" +
+                    `<img src=\"img/${index}.jpg\" alt=\"Image\" height=\"320\" width=\"320\">` +
+                    `<figcaption><a href=\"img/${index}.jpg\">View more</a></figcaption>` +
+                    "</figure></div>";
+            }
+
+            let htmlListImg = "";
+            for (let i = 0; i < 220; i++) {
+                htmlListImg = htmlListImg + genHTML(i);
+            }
+
+            $('#galleryID').html(htmlListImg);
+
+        });
+    </script>
+
+
+</body>
+
+</html>
