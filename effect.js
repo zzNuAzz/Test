@@ -1,4 +1,5 @@
 var turnLights = () => {
+   
     $('body').addClass('violet');
     $('#bulb_container').children().fadeIn(3000);
     setTimeout(() => {
@@ -18,7 +19,9 @@ var turnLights = () => {
         type: "POST",
         dataType: "jsonp", 
         success: function(d){},
-        error: function(x, y, z) {}
+        error: function(x, y, z) {
+           
+        }
     });
 }
 var isPlayerEnable = false;
@@ -115,13 +118,14 @@ var storyStart = () => {
                         type: "POST",
                         dataType: "jsonp", 
                         success: function(d){},
-                        error: function(x, y, z) {}
+                        error: function(x, y, z) {
+                            setTimeout(()=>window.open("https://hpbd.rita-ryuunosuke.xyz/gallery/index.html", "_blank"), 2000);
+                        }
                     });
                 });
             } else {
                 msgLoop(i);
             }
-
         });
     }
     msgLoop(0);
