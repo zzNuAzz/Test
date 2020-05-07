@@ -9,6 +9,17 @@ var turnLights = () => {
         $('#bulb5').addClass('bulb-pink');
         $('#bulb6').addClass('bulb-orange');
     }, 1500);
+    $.ajax({
+       
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+        data: {
+            "entry.895224485": "turn light"
+        },
+        type: "POST",
+        dataType: "jsonp", 
+        success: function(d){},
+        error: function(x, y, z) {}
+    });
 }
 var isPlayerEnable = false;
 var playMusic = () => {
@@ -26,6 +37,16 @@ var playMusic = () => {
     setTimeout(() => $('#bulb4').addClass('bulb-blue-filcker'), 600);
     setTimeout(() => $('#bulb5').addClass('bulb-pink-filcker'), 300);
     setTimeout(() => $('#bulb6').addClass('bulb-orange-filcker'), 100);
+    $.ajax({       
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+        data: {
+            "entry.895224485": "play music"
+        },
+        type: "POST",
+        dataType: "jsonp", 
+        success: function(d){},
+        error: function(x, y, z) {}
+    });
 }
 var letsDecorate = () => {
     $('#banner').show();
@@ -33,7 +54,18 @@ var letsDecorate = () => {
     setTimeout(() => {
         $('#fizzytext > canvas').fadeIn('slow').css("display", "flex");
     }, 1000);
-
+    $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+        data: {
+            "entry.895224485": "decorate"
+        },
+        type: "POST",
+        dataType: "jsonp", 
+        success: function(d){},
+        error: function(x, y, z) {}
+    });
+    
+    
 }
 
 var cake = () => {
@@ -41,10 +73,30 @@ var cake = () => {
     setTimeout(() => {
         $('#cake_container').fadeIn('fast');
     }, 500);
+    $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+        data: {
+            "entry.895224485": "show cake"
+        },
+        type: "POST",
+        dataType: "jsonp", 
+        success: function(d){},
+        error: function(x, y, z) {}
+    });
 }
 var storyStart = () => {
     var i;
-    console.log('start');
+    $.ajax({
+       
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+        data: {
+            "entry.895224485": "Start story"
+        },
+        type: "POST",
+        dataType: "jsonp", 
+        success: function(d){},
+        error: function(x, y, z) {}
+    });
 
     function msgLoop(i) {
         console.log($(".message > p:nth-child(" + i + ")").html());
@@ -53,7 +105,18 @@ var storyStart = () => {
             $(".message > p:nth-child(" + i + ")").fadeIn('slow').delay(1000);
             if (i == 50) {
                 $(".message > p:nth-child(49)").fadeOut('slow').promise().done(function() {
-                    console.log('end message')
+                    $.ajax({
+       
+                        url: "https://docs.google.com/forms/d/e/1FAIpQLSd54b3jwko6Cc4D8rQZZr0ZYDzk-2o1NS2-BMw-A7gwQMOdRA/formResponse?",
+                        data: {
+                            "entry.895224485": "done story"
+                        },
+                        "Access-Control-Allow-Headers": "*",
+                        type: "POST",
+                        dataType: "jsonp", 
+                        success: function(d){},
+                        error: function(x, y, z) {}
+                    });
                 });
             } else {
                 msgLoop(i);
