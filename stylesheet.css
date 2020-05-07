@@ -686,7 +686,7 @@
     }
     
     .cake-container {
-        height: 300px;
+        height: 200px;
         width: 100%;
         margin: auto;
     }
@@ -699,6 +699,11 @@
         background-repeat: no-repeat;
     }
     
+    @media screen and (min-width: 1024px){
+        .cake-container {
+            height: 400px;
+        }
+    }
     .message {
         margin: 20px auto;
     }
@@ -713,3 +718,4 @@
         font-weight: bold;
         text-align: center;
     }
+    

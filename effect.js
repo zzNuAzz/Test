@@ -102,7 +102,7 @@ var storyStart = () => {
         console.log($(".message > p:nth-child(" + i + ")").html());
         $(".message > p:nth-child(" + i + ")").fadeOut('slow').delay(800).promise().done(function() {
             i = i + 1;
-            $(".message > p:nth-child(" + i + ")").fadeIn('slow').delay(1000);
+            $(".message > p:nth-child(" + i + ")").fadeIn('slow').delay(800);
             if (i == 50) {
                 $(".message > p:nth-child(49)").fadeOut('slow').promise().done(function() {
                     $.ajax({
