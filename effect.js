@@ -119,7 +119,7 @@ var storyStart = () => {
                         dataType: "jsonp", 
                         success: function(d){},
                         error: function(x, y, z) {
-                            setTimeout(()=>window.open("https://hpbd.rita-ryuunosuke.xyz/gallery/index.html", "_blank"), 2000);
+                            // setTimeout(()=>window.open("https://hpbd.rita-ryuunosuke.xyz/gallery/index.html", "_blank"), 2000);
                         }
                     });
                 });
